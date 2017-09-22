@@ -1,20 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { WebLoaderService } from './web-loader.service';
+import { SubjectTesterComponent } from './subject-tester/subject-tester.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SubjectTesterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
       WebLoaderService
